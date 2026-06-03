@@ -8,8 +8,8 @@ const crypto = require('crypto');
 const app = express();
 
 // Konfigurasi Supabase (GANTI PPAKE PUNYA LO!)
-const supabaseUrl = 'https://xxxxxxxxxxxx.supabase.co';
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIs...'; // Service Role Key
+const supabaseUrl = 'https://ibzgaokdgkjtydsrazpw.supabase.co';
+const supabaseKey = 'sb_publishable_wb44sdrIasS5UI4F83azyw_ALgc2Cva'; // Service Role Key
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 // Konfigurasi multer (buffer, bukan save ke disk)
@@ -47,7 +47,7 @@ app.post('/upload', upload.single('cdnFile'), async (req, res) => {
             .getPublicUrl(fileName);
         
         // Kirim response pake DOMAIN LO sendiri!
-        const yourDomain = 'https://domain-lo.com'; // GANTI!
+        const yourDomain = 'https://babehmodss-vvip.my.id'; // GANTI!
         const customUrl = `${yourDomain}/file/${fileName}`;
         
         res.json({
