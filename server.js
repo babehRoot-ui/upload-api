@@ -47,7 +47,7 @@ app.post('/upload', upload.single('cdnFile'), async (req, res) => {
             .getPublicUrl(fileName);
         
         // Kirim response pake DOMAIN LO sendiri!
-        const yourDomain = 'https://babehmodss-vvip.my.id'; // GANTI!
+        const yourDomain = 'https://upload-api-pink.vercel.app/'; // GANTI!
         const customUrl = `${yourDomain}/file/${fileName}`;
         
         res.json({
